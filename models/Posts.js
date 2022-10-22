@@ -15,23 +15,24 @@ Posts.init(
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
-      },
-      title: {
+    },
+    title: {
         type: DataTypes.STRING(75),
         allowNull: false
-      },
-      summary: {
+    },
+    content: {
         type: DataTypes.TEXT
-      },
-      content: {
-        type: DataTypes.TEXT
-      },
-      createdAt: {
+    },
+    createdAt: {
         type: DataTypes.DATE
-      },
-      updatedAt: {
+    },
+    updatedAt: {
         type: DataTypes.DATE
-      },
+    },
+    userid: {
+        type: DataTypes.INTEGER.UNSIGNED,
+        allowNull: false
+    },
   },
   {
     sequelize,
@@ -42,7 +43,7 @@ Posts.init(
   }
 );
 
-module.exports = Product;
+module.exports = Posts;
 
 // metaTitle: {
 //     type: DataTypes.STRING(100)

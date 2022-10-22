@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Lorem ipsum dolor",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium aenean. Aenean sed adipiscing diam donec adipiscing tristique risus nec. Suscipit tellus mauris a diam maecenas sed. Eget duis at tellus at urna condimentum mattis.",
+    "createdAt": "2022-07-31",
+    "updatedAt": "2022-07-31",
+    "userid": 1
+  },
+  {
+    "title": "Aenean sed adipiscing",
+    "content": "Aenean sed adipiscing diam donec adipiscing tristique risus nec. Suscipit tellus mauris a diam maecenas sed. Eget duis at tellus at urna condimentum mattis.",
+    "createdAt": "2022-03-15",
+    "updatedAt": "2022-03-15",
+    "userid": 2
+  },
+  {
+    "title": "Eget magna fermentum",
+    "content": "Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Felis eget velit aliquet sagittis id consectetur.",
+    "createdAt": "2022-10-01",
+    "updatedAt": "2022-10-01",
+    "userid": 3
+  },
+  {
+    "title": "Nullam vehicula ipsum",
+    "content": "Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Sed elementum tempus egestas sed sed risus pretium. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Quisque non tellus orci ac. ",
+    "createdAt": "2022-06-07",
+    "updatedAt": "2022-06-07",
+    "userid": 4
+  },
+  {
+    "title": "Pharetra diam sit",
+    "content": "Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies. Sit amet nisl suscipit adipiscing bibendum est ultricies. Quis risus sed vulputate odio ut enim blandit volutpat maecenas.",
+    "createdAt": "2022-02-17",
+    "updatedAt": "2022-02-17",
+    "userid": 5
+  }
+]

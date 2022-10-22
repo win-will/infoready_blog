@@ -1,23 +1,38 @@
-<div class="box">
-  <form method="POST" action="/login">
+<div class="box" style="height:250px; max-width:350px;margin-left:auto;margin-right:auto;">
+  <h2>Login</h2>
 
-    <div class="field has-text-left">
-        <label class="label is-small">Username</label>
-        <div class="control">
-            <input class="input is-small" type="text" name="username" autofocus="">
-        </div>
+  <!-- <form class="form login-form">
+    <div class="form-group">
+      <label for="username-login">Username:</label>
+      <input class="form-input" type="text" id="username-login" />
     </div>
-
-    <div class="field has-text-left">
-        <label class="label is-small">Password</label>
-        <div class="control">
-            <input class="input is-small" type="password" name="password">
-        </div>
+    <div class="form-group">
+      <label for="password-login">Password:</label>
+      <input class="form-input" type="password" id="password-login" />
     </div>
-
-    <button class="button is-block is-small is-fullwidth" style="background-color: #1f3e61; border: none;color: white;">Sign In</button>
-  
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">login</button>
+    </div>
   </form>
 </div>
+-->
 
+<form class="form login-form">
+  <div class="field has-text-left">
+    <label class="label is-small">Username</label>
+    <div class="control">
+      <input class="input is-small" type="text" name="username" id="username-login">
+    </div>
+  </div>
 
+  <div class="field has-text-left">
+    <label class="label is-small">Password</label>
+    <div class="control">
+      <input class="input is-small" type="password" name="password" id="password-login" >
+    </div>
+  </div>
+
+  <button class="button is-block is-small is-fullwidth" style="background-color: #1f3e61; border: none;color: white;" type="submit">Login In</button>
+</form>
+<box>
+<script src="/js/login.js"></script>

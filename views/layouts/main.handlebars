@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" />
-      <link rel="stylesheet" href="../static/css/scConsole.css">
+      <link rel="stylesheet" href="/css/style.css">
   </head>
 
   <body style="background: rgb(0,97,255);background: linear-gradient(40deg, rgba(0,97,255,1) 0%, rgba(110,149,212,1) 0%, rgba(2,0,36,1) 100%);height:900px;">
@@ -41,17 +41,17 @@
             </a>
           </li>
           {{/unless}}
+          {{#if logged_in}}
           <li>
             <a class="has-text-grey-light has-text-weight-bold" id="searchProvider" id="yourPostsLabel">
               <span class="icon is-small"><i class="fas fa-magnifying-glass-arrow-right"></i></span>
               <span>Your Posts</span>
             </a>
-          </li>
-          {{#if logged_in}}
+          </li>          
           <li>
-            <a href="./logout" class="has-text-grey-light has-text-weight-bold" id="logoutLabel">
+            <a class="has-text-grey-light has-text-weight-bold" id="logout">
               <span class="icon is-small"><i class="far fa-power-off" aria-hidden="true"></i></span>
-              <span>Sign Out</span>
+              <span>Log Out</span>
             </a>
           </li>
           {{/if}}
@@ -60,17 +60,21 @@
 
     </div>
     <div class="container" id="viewMain">
-        <div class="container is-flex-direction-row" style="max-height:200px; max-width:960px;margin-left:auto;margin-right:auto;margin-top:20px;margin-bottom:20px;align-items:bottom;">
+        <div class="container is-flex-direction-row" style="height:900px; max-width:960px;margin-left:auto;margin-right:auto;margin-top:20px;margin-bottom:20px;align-items:bottom;">
 
           {{{ body }}}
        
-       
+        </div>
+    </div>
       <footer class="title has-text-right" style="margin-top:20px;height:30px;min-width:968px;">
           <div class="content has-text-white is-size-7" style="margin-bottom:auto;margin-top:auto;margin-right:5px;">
             <p>© 2022 InfoReady, All rights reserved</p>
           </div>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="../static/js/scConsole.js"></script>
+      <script src="/js/script.js"></script>
+      {{#if logged_in}}
+        <script src="/js/logout.js"></script>
+      {{/if}}
     </body>
 </html>
