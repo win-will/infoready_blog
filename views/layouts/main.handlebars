@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Secure Coding Console</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" />
+      <link rel="stylesheet" href="../static/css/scConsole.css">
+  </head>
+
+  <body style="background: rgb(0,97,255);background: linear-gradient(40deg, rgba(0,97,255,1) 0%, rgba(110,149,212,1) 0%, rgba(2,0,36,1) 100%);height:900px;">
+    <div class="hero-head">
+      <div class="navbar-brand">
+            <span class="title has-text-white has-text-centered" style="margin-top:30px; margin-bottom:30px; margin-left:auto;margin-right:auto;">
+              <span>InfoReady</span><span class="is-size-4 has-text-danger is-uppercase is-family-monospace"> Blog</span>
+            </span>
+      </div>
+   
+      <div class="tabs is-centered is-boxed">
+        <ul>
+          <li>
+            <a class="has-text-grey-light has-text-weight-bold" id="homeLabel">
+              <span class="icon is-small"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="has-text-grey-light has-text-weight-bold" id="dashboardLabel">
+              <span class="icon is-small"><i class="fas fa-magnifying-glass-arrow-right"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          {{#unless logged_in}}
+          <li>
+            <a href="./login" class="has-text-grey-light has-text-weight-bold" id="loginLabel">
+              <span class="icon is-small"><i class="far fa-power-off" aria-hidden="true"></i></span>
+              <span>Log In</span>
+            </a>
+          </li>
+          {{/unless}}
+          <li>
+            <a class="has-text-grey-light has-text-weight-bold" id="searchProvider" id="yourPostsLabel">
+              <span class="icon is-small"><i class="fas fa-magnifying-glass-arrow-right"></i></span>
+              <span>Your Posts</span>
+            </a>
+          </li>
+          {{#if logged_in}}
+          <li>
+            <a href="./logout" class="has-text-grey-light has-text-weight-bold" id="logoutLabel">
+              <span class="icon is-small"><i class="far fa-power-off" aria-hidden="true"></i></span>
+              <span>Sign Out</span>
+            </a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+
+    </div>
+    <div class="container" id="viewMain">
+        <div class="container is-flex-direction-row" style="max-height:200px; max-width:960px;margin-left:auto;margin-right:auto;margin-top:20px;margin-bottom:20px;align-items:bottom;">
+
+          {{{ body }}}
+       
+       
+      <footer class="title has-text-right" style="margin-top:20px;height:30px;min-width:968px;">
+          <div class="content has-text-white is-size-7" style="margin-bottom:auto;margin-top:auto;margin-right:5px;">
+            <p>© 2022 InfoReady, All rights reserved</p>
+          </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="../static/js/scConsole.js"></script>
+    </body>
+</html>
