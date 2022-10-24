@@ -36,6 +36,28 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.post('/signup', async (req, res) => {
+
+    User.create(req.body)
+    .then((user) => {
+
+      res.status(200).json(user);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(400).json(err);
+    });
+
+});
+  
+
+router.post('/getUserId', (req, res) => {
+  
+  if (req.session.logged_in) res.json({ userid: req.session.user_id});
+  else res.status(401).json("Authorization Required");
+  
+});
+
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables

@@ -1,767 +1,767 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
-    $("#searchMember").css({ "border-style": "solid", "border-color": "white" });
+//     $("#searchMember").css({ "border-style": "solid", "border-color": "white" });
 
-    $("#searchProvider").css({ "border-style": "none" });
+//     $("#searchProvider").css({ "border-style": "none" });
 
-    $("#addMember").css({ "border-style": "none" });
+//     $("#addMember").css({ "border-style": "none" });
 
-    $("#addProvider").css({ "border-style": "none" });
+//     $("#addProvider").css({ "border-style": "none" });
 
-    $("#deleteProvider").css({ "border-style": "none" });
+//     $("#deleteProvider").css({ "border-style": "none" });
 
-    $("#deleteMember").css({ "border-style": "none" });
+//     $("#deleteMember").css({ "border-style": "none" });
 
-});
-
- 
-
-// View event handlers
-
-$("#searchMember").on("click", function() {
-
-    $("#viewSearchMember").show();
-
-    $("#viewSearchProvider").hide();
-
-    $("#viewAddMember").hide();
-
-    $("#viewAddProvider").hide();
-
-    $("#viewDeleteMember").hide();
-
-    $("#viewDeleteProvider").hide();
+// });
 
  
 
-    $("#searchMember").css({ "border-style": "solid", "border-color": "white" });
+// // View event handlers
 
-    $("#searchProvider").css({ "border-style": "none" });
+// $("#searchMember").on("click", function() {
 
-    $("#addMember").css({ "border-style": "none" });
+//     $("#viewSearchMember").show();
 
-    $("#addProvider").css({ "border-style": "none" });
+//     $("#viewSearchProvider").hide();
 
-    $("#deleteProvider").css({ "border-style": "none" });
+//     $("#viewAddMember").hide();
 
-    $("#deleteMember").css({ "border-style": "none" });
+//     $("#viewAddProvider").hide();
 
- 
+//     $("#viewDeleteMember").hide();
 
-});
-
- 
-
-$("#searchProvider").on("click", function() {
-
-    $("#viewSearchMember").hide();
-
-    $("#viewSearchProvider").show();
-
-    $("#viewAddMember").hide();
-
-    $("#viewAddProvider").hide();
-
-    $("#viewDeleteMember").hide();
-
-    $("#viewDeleteProvider").hide();
+//     $("#viewDeleteProvider").hide();
 
  
 
-    $("#searchMember").css({ "border-style": "none" });
+//     $("#searchMember").css({ "border-style": "solid", "border-color": "white" });
 
-    $("#searchProvider").css({ "border-style": "solid", "border-color": "white" });
+//     $("#searchProvider").css({ "border-style": "none" });
 
-    $("#addMember").css({ "border-style": "none" });
+//     $("#addMember").css({ "border-style": "none" });
 
-    $("#addProvider").css({ "border-style": "none" });
+//     $("#addProvider").css({ "border-style": "none" });
 
-    $("#deleteProvider").css({ "border-style": "none" });
+//     $("#deleteProvider").css({ "border-style": "none" });
 
-    $("#deleteMember").css({ "border-style": "none" });
-
-});
+//     $("#deleteMember").css({ "border-style": "none" });
 
  
 
-$("#addMember").on("click", function() {
-
-    $("#viewSearchMember").hide();
-
-    $("#viewSearchProvider").hide();
-
-    $("#viewAddMember").show();
-
-    $("#viewAddProvider").hide();
-
-    $("#viewDeleteMember").hide();
-
-    $("#viewDeleteProvider").hide();
+// });
 
  
 
-    $("#searchMember").css({ "border-style": "none" });
+// $("#searchProvider").on("click", function() {
 
-    $("#searchProvider").css({ "border-style": "none" });
+//     $("#viewSearchMember").hide();
 
-    $("#addMember").css({ "border-style": "solid", "border-color": "white" });
+//     $("#viewSearchProvider").show();
 
-    $("#addProvider").css({ "border-style": "none" });
+//     $("#viewAddMember").hide();
 
-    $("#deleteProvider").css({ "border-style": "none" });
+//     $("#viewAddProvider").hide();
 
-    $("#deleteMember").css({ "border-style": "none" });
+//     $("#viewDeleteMember").hide();
 
-});
-
- 
-
-$("#addProvider").on("click", function() {
-
-    $("#viewSearchMember").hide();
-
-    $("#viewSearchProvider").hide();
-
-    $("#viewAddMember").hide();
-
-    $("#viewDeleteMember").hide();
-
-    $("#viewDeleteProvider").hide();
-
-    $("#viewAddProvider").show();
+//     $("#viewDeleteProvider").hide();
 
  
 
-    $("#searchMember").css({ "border-style": "none" });
+//     $("#searchMember").css({ "border-style": "none" });
 
-    $("#searchProvider").css({ "border-style": "none" });
+//     $("#searchProvider").css({ "border-style": "solid", "border-color": "white" });
 
-    $("#addMember").css({ "border-style": "none" });
+//     $("#addMember").css({ "border-style": "none" });
 
-    $("#deleteProvider").css({ "border-style": "none" });
+//     $("#addProvider").css({ "border-style": "none" });
 
-    $("#deleteMember").css({ "border-style": "none" });
+//     $("#deleteProvider").css({ "border-style": "none" });
 
-    $("#addProvider").css({ "border-style": "solid", "border-color": "white" });
+//     $("#deleteMember").css({ "border-style": "none" });
 
-});
-
- 
-
-$("#deleteMember").on("click", function() {
-
-    $("#viewSearchMember").hide();
-
-    $("#viewSearchProvider").hide();
-
-    $("#viewAddMember").hide();
-
-    $("#viewAddProvider").hide();
-
-    $("#viewDeleteMember").show();
-
-    $("#viewDeleteProvider").hide();
-
-    $("#deleteMemberResponse").empty();
+// });
 
  
 
-    $("#searchMember").css({ "border-style": "none" });
+// $("#addMember").on("click", function() {
 
-    $("#searchProvider").css({ "border-style": "none" });
+//     $("#viewSearchMember").hide();
 
-    $("#addMember").css({ "border-style": "none" });
+//     $("#viewSearchProvider").hide();
 
-    $("#addProvider").css({ "border-style": "none" });
+//     $("#viewAddMember").show();
 
-    $("#deleteProvider").css({ "border-style": "none" });
+//     $("#viewAddProvider").hide();
 
-    $("#deleteMember").css({ "border-style": "solid", "border-color": "white" });
+//     $("#viewDeleteMember").hide();
 
-});
-
- 
-
-$("#deleteProvider").on("click", function() {
-
-    $("#viewSearchMember").hide();
-
-    $("#viewSearchProvider").hide();
-
-    $("#viewAddMember").hide();
-
-    $("#viewAddProvider").hide();
-
-    $("#viewDeleteMember").hide();
-
-    $("#viewDeleteProvider").show();
-
-    $("#deleteProviderResponse").empty();
+//     $("#viewDeleteProvider").hide();
 
  
 
- 
+//     $("#searchMember").css({ "border-style": "none" });
 
-    $("#searchMember").css({ "border-style": "none" });
+//     $("#searchProvider").css({ "border-style": "none" });
 
-    $("#searchProvider").css({ "border-style": "none" });
+//     $("#addMember").css({ "border-style": "solid", "border-color": "white" });
 
-    $("#addMember").css({ "border-style": "none" });
+//     $("#addProvider").css({ "border-style": "none" });
 
-    $("#addProvider").css({ "border-style": "none" });
+//     $("#deleteProvider").css({ "border-style": "none" });
 
-    $("#deleteProvider").css({ "border-style": "solid", "border-color": "white" });
+//     $("#deleteMember").css({ "border-style": "none" });
 
-    $("#deleteMember").css({ "border-style": "none" });
-
-});
+// });
 
  
 
-$("#addMemberBtn").on("click", function() {
+// $("#addProvider").on("click", function() {
+
+//     $("#viewSearchMember").hide();
+
+//     $("#viewSearchProvider").hide();
+
+//     $("#viewAddMember").hide();
+
+//     $("#viewDeleteMember").hide();
+
+//     $("#viewDeleteProvider").hide();
+
+//     $("#viewAddProvider").show();
 
  
 
-    const loc = document.location;
+//     $("#searchMember").css({ "border-style": "none" });
 
-    const success = `<p class="has-text-centered has-text-white">Successfully Added Member<p>`;
+//     $("#searchProvider").css({ "border-style": "none" });
 
-    const error = `<p class="has-text-centered has-text-white">Error Adding Member<p>`;
+//     $("#addMember").css({ "border-style": "none" });
 
-    $("#addMemberResponse").empty();
+//     $("#deleteProvider").css({ "border-style": "none" });
 
- 
+//     $("#deleteMember").css({ "border-style": "none" });
 
-    const memberID = $("#addMemberID").val();
+//     $("#addProvider").css({ "border-style": "solid", "border-color": "white" });
 
-    const memberUname = $("#addMemberUN").val();
-
-    const memberPrefix = $("#addMemberPrefix").val();
-
-    const memberFname = $("#addMemberFN").val();
-
-    const memberMname = $("#addMemberMN").val();
-
-    const memberLname = $("#addMemberLN").val();
-
-    const memberSuffix = $("#addMemberSuffix").val();
-
-   const memberAddSname = $("#addMemberSingleName").is(':checked');
-
-    const memberSSN = $("#addMemberSSN").val();
-
-    const memberDOB = $("#addMemberDOB").val();
-
-    const memberAddr1 = $("#addMemberAddr1").val();
-
-    const memberAddr2 = $("#addMemberAddr2").val();
-
-    const memberCity = $("#addMemberCity").val();
-
-    const memberState = $("#addMemberState").val();
-
-    const memberZip = $("#addMemberZip").val();
-
-    const memberStartDate = $("#addMemberStartDate").val();
-
-    const memberEndDate = $("#addMemberEndDate").val();
+// });
 
  
 
-    const data = {
+// $("#deleteMember").on("click", function() {
 
-        memberID: memberID,
+//     $("#viewSearchMember").hide();
 
-        memberUname: memberUname,
+//     $("#viewSearchProvider").hide();
 
-        memberPrefix: memberPrefix,
+//     $("#viewAddMember").hide();
 
-        memberFname: memberFname,
+//     $("#viewAddProvider").hide();
 
-        memberMname: memberMname,
+//     $("#viewDeleteMember").show();
 
-        memberLname: memberLname,
+//     $("#viewDeleteProvider").hide();
 
-        memberSuffix: memberSuffix,
-
-        memberAddSname: memberAddSname,
-
-        memberSSN: memberSSN,
-
-        memberDOB: memberDOB,
-
-        memberAddr1: memberAddr1,
-
-        memberAddr2: memberAddr2,
-
-        memberCity: memberCity,
-
-        memberState: memberState,
-
-        memberZip: memberZip,
-
-        memberStartDate: memberStartDate,
-
-        memberEndDate: memberEndDate
+//     $("#deleteMemberResponse").empty();
 
  
 
-    };
+//     $("#searchMember").css({ "border-style": "none" });
 
-    // console.log(data);
+//     $("#searchProvider").css({ "border-style": "none" });
 
-    fetch(`${loc.origin}/api/addMember`, {
+//     $("#addMember").css({ "border-style": "none" });
 
-            method: 'POST',
+//     $("#addProvider").css({ "border-style": "none" });
 
-            headers: {
+//     $("#deleteProvider").css({ "border-style": "none" });
 
-                'Content-Type': 'application/json',
+//     $("#deleteMember").css({ "border-style": "solid", "border-color": "white" });
 
-            },
-
-            body: JSON.stringify(data),
-
-        })
-
-        .then((response) => {
-
-            if (response.status === 200) $("#addMemberResponse").append(success);
-
-            else $("#addMemberResponse").append(error);
-
-        });
+// });
 
  
 
-});
+// $("#deleteProvider").on("click", function() {
 
- 
+//     $("#viewSearchMember").hide();
 
-$("#addProviderBtn").on("click", function() {
+//     $("#viewSearchProvider").hide();
 
- 
+//     $("#viewAddMember").hide();
 
-    const loc = document.location;
+//     $("#viewAddProvider").hide();
 
-    const success = `<p class="has-text-centered has-text-white">Successfully Added Provider<p>`;
+//     $("#viewDeleteMember").hide();
 
-    const error = `<p class="has-text-centered has-text-white">Error Adding Provider<p>`;
+//     $("#viewDeleteProvider").show();
 
-    $("#addProviderResponse").empty();
-
- 
-
-    const providerID = $("#addProviderID").val();
-
-    const providerBname = $("#addProviderBN").val();
-
-    const providerTitle = $("#addProviderTitle").val();
-
-    const providerFname = $("#addProviderFN").val();
-
-    const providerMinitial = $("#addProviderMI").val();
-
-    const providerLname = $("#addProviderLN").val();
-
-    const providerSuffix = $("#addProviderSuffix").val();
-
-    const providerEmail = $("#addProviderEmail").val();
-
-    const providerSSN = $("#addProviderSSN").val();
-
-    const providerDOB = $("#addProviderDOB").val();
-
-    const providerAddr1 = $("#addProviderAddr1").val();
-
-    const providerAddr2 = $("#addProviderAddr2").val();
-
-    const providerCity = $("#addProviderCity").val();
-
-    const providerState = $("#addProviderState").val();
-
-    const providerZip = $("#addProviderZip").val();
-
-    const providerTel = $("#addProviderTel").val();
-
-    const providerEffDate = $("#addProviderEffDate").val();
-
- 
-
-    const data = {
-
-        providerID: providerID,
-
-        providerBname: providerBname,
-
-        providerTitle: providerTitle,
-
-        providerFname: providerFname,
-
-        providerMinitial: providerMinitial,
-
-        providerLname: providerLname,
-
-        providerSuffix: providerSuffix,
-
-        providerEmail: providerEmail,
-
-        providerSSN: providerSSN,
-
-        providerDOB: providerDOB,
-
-        providerAddr1: providerAddr1,
-
-        providerAddr2: providerAddr2,
-
-        providerCity: providerCity,
-
-        providerState: providerState,
-
-        providerZip: providerZip,
-
-        providerTel: providerTel,
-
-        providerEffDate: providerEffDate
-
- 
-
-    };
-
-    // console.log(data);
-
-    fetch(`${loc.origin}/api/addProvider`, {
-
-            method: 'POST',
-
-            headers: {
-
-                'Content-Type': 'application/json',
-
-            },
-
-            body: JSON.stringify(data),
-
-        })
-
-        .then((response) => {
-
-            if (response.status === 200) $("#addProviderResponse").append(success);
-
-            else $("#addProviderResponse").append(error);
-
-        });
-
- 
-
-});
+//     $("#deleteProviderResponse").empty();
 
  
 
  
 
-$("#searchMemberBtn").on("click", function() {
+//     $("#searchMember").css({ "border-style": "none" });
 
-    const loc = document.location;
+//     $("#searchProvider").css({ "border-style": "none" });
 
- 
+//     $("#addMember").css({ "border-style": "none" });
 
-    let memberID = $("#searchMemberID").val();
+//     $("#addProvider").css({ "border-style": "none" });
 
-    let memberFN = $("#searchMemberFN").val();
+//     $("#deleteProvider").css({ "border-style": "solid", "border-color": "white" });
 
-    let memberLN = $("#searchMemberLN").val();
+//     $("#deleteMember").css({ "border-style": "none" });
 
-    let memberDOB = $("#searchMemberDOB").val();
-
- 
-
-    if (Number.isNaN(parseInt(memberID))) memberID = -1;
-
-    else memberID = parseInt(memberID);
+// });
 
  
 
-    const data = {
-
-        memberID: memberID,
-
-        memberFN: memberFN,
-
-        memberLN: memberLN,
-
-        memberDOB: memberDOB
-
-    };
+// $("#addMemberBtn").on("click", function() {
 
  
 
-    fetch(`${loc.origin}/api/allMemberSearch`, {
+//     const loc = document.location;
 
-            method: 'POST',
+//     const success = `<p class="has-text-centered has-text-white">Successfully Added Member<p>`;
 
-            headers: {
+//     const error = `<p class="has-text-centered has-text-white">Error Adding Member<p>`;
 
-                'Content-Type': 'application/json',
-
-            },
-
-            body: JSON.stringify(data),
-
-        })
-
-        .then((response) => response.json())
-
-        .then((data) => {
+//     $("#addMemberResponse").empty();
 
  
 
-            $("#memberTableBody").empty();
+//     const memberID = $("#addMemberID").val();
 
-            for (const element of data.list) {
+//     const memberUname = $("#addMemberUN").val();
 
-                let rowHTML = `<tr>
+//     const memberPrefix = $("#addMemberPrefix").val();
 
-                <td>${element.member_id}</td>
+//     const memberFname = $("#addMemberFN").val();
 
-                <td>${element.user_name}</td>
+//     const memberMname = $("#addMemberMN").val();
 
-                <td>${element.first_name}</td>
+//     const memberLname = $("#addMemberLN").val();
 
-                <td>${element.last_name}</td>
+//     const memberSuffix = $("#addMemberSuffix").val();
 
-                <td>${element.dob}</td>
+//    const memberAddSname = $("#addMemberSingleName").is(':checked');
 
-                <td>${element.address_line1}</td>
+//     const memberSSN = $("#addMemberSSN").val();
 
-                <td>${element.city}</td>
+//     const memberDOB = $("#addMemberDOB").val();
 
-                <td>${element.state_code}</td>
+//     const memberAddr1 = $("#addMemberAddr1").val();
 
-                <td>${element.zip_code}</td>
+//     const memberAddr2 = $("#addMemberAddr2").val();
 
-                </tr>`;
+//     const memberCity = $("#addMemberCity").val();
 
-                $("#memberTableBody").append(rowHTML);
+//     const memberState = $("#addMemberState").val();
 
-            }
+//     const memberZip = $("#addMemberZip").val();
 
-        });
+//     const memberStartDate = $("#addMemberStartDate").val();
 
-});
-
- 
-
-$("#searchProviderBtn").on("click", function() {
-
-    const loc = document.location;
+//     const memberEndDate = $("#addMemberEndDate").val();
 
  
 
-    let providerID = $("#searchProviderID").val();
+//     const data = {
 
-    let providerBN = $("#searchProviderBN").val();
+//         memberID: memberID,
 
-    let providerFN = $("#searchProviderFN").val();
+//         memberUname: memberUname,
 
-    let providerLN = $("#searchProviderLN").val();
+//         memberPrefix: memberPrefix,
 
- 
+//         memberFname: memberFname,
 
-    if (Number.isNaN(parseInt(providerID))) providerID = -1;
+//         memberMname: memberMname,
 
-    else providerID = parseInt(providerID);
+//         memberLname: memberLname,
 
- 
+//         memberSuffix: memberSuffix,
 
-    const data = {
+//         memberAddSname: memberAddSname,
 
-        providerID: providerID,
+//         memberSSN: memberSSN,
 
-        providerBN: providerBN,
+//         memberDOB: memberDOB,
 
-        providerFN: providerFN,
+//         memberAddr1: memberAddr1,
 
-        providerLN: providerLN
+//         memberAddr2: memberAddr2,
 
-    };
+//         memberCity: memberCity,
 
- 
+//         memberState: memberState,
 
-    fetch(`${loc.origin}/api/allProviderSearch`, {
+//         memberZip: memberZip,
 
-            method: 'POST',
+//         memberStartDate: memberStartDate,
 
-            headers: {
-
-                'Content-Type': 'application/json',
-
-            },
-
-            body: JSON.stringify(data),
-
-        })
-
-        .then((response) => response.json())
-
-        .then((data) => {
+//         memberEndDate: memberEndDate
 
  
 
-            $("#providerTableBody").empty();
+//     };
 
-            for (const element of data.list) {
+//     // console.log(data);
 
-                let rowHTML = `<tr>
+//     fetch(`${loc.origin}/api/addMember`, {
 
-                <td>${element.provider_id}</td>
+//             method: 'POST',
 
-                <td>${element.business_name}</td>
+//             headers: {
 
-                <td>${element.first_name}</td>
+//                 'Content-Type': 'application/json',
 
-                <td>${element.last_name}</td>
+//             },
 
-                <td>${element.birth_date}</td>
+//             body: JSON.stringify(data),
 
-                <td>${element.address_line1}</td>
+//         })
 
-                <td>${element.city}</td>
+//         .then((response) => {
 
-                <td>${element.state_code}</td>
+//             if (response.status === 200) $("#addMemberResponse").append(success);
 
-                <td>${element.zip_code}</td>
+//             else $("#addMemberResponse").append(error);
 
-                </tr>`;
-
-                $("#providerTableBody").append(rowHTML);
-
-            }
-
-        });
-
-});
+//         });
 
  
 
-$("#deleteMemberBtn").on("click", function() {
-
-    const loc = document.location;
-
-    const success = `<p class="has-text-centered has-text-white">Successfully Deleted Member<p>`;
-
-    const error = `<p class="has-text-centered has-text-white">Error Deleting Member<p>`;
-
-    $("#deleteMemberResponse").empty();
-
-    let memberID = $("#deleteMemberID").val();
+// });
 
  
 
-    if (Number.isNaN(parseInt(memberID))) $("#deleteMemberResponse").append(error);
-
-    else {
-
-        memberID = parseInt(memberID);
-
-        const data = {
-
-            memberID: memberID
-
-        };
+// $("#addProviderBtn").on("click", function() {
 
  
 
-        fetch(`${loc.origin}/api/deleteMember`, {
+//     const loc = document.location;
 
-                method: 'DELETE',
+//     const success = `<p class="has-text-centered has-text-white">Successfully Added Provider<p>`;
 
-                headers: {
+//     const error = `<p class="has-text-centered has-text-white">Error Adding Provider<p>`;
 
-                    'Content-Type': 'application/json',
-
-                },
-
-                body: JSON.stringify(data),
-
-            })
-
-            .then((response) => {
+//     $("#addProviderResponse").empty();
 
  
 
- 
+//     const providerID = $("#addProviderID").val();
 
-                if (response.status === 200) $("#deleteMemberResponse").append(success);
+//     const providerBname = $("#addProviderBN").val();
 
-                else $("#deleteMemberResponse").append(error);
+//     const providerTitle = $("#addProviderTitle").val();
 
-            });
+//     const providerFname = $("#addProviderFN").val();
 
- 
+//     const providerMinitial = $("#addProviderMI").val();
 
-    }
+//     const providerLname = $("#addProviderLN").val();
 
-});
+//     const providerSuffix = $("#addProviderSuffix").val();
 
- 
+//     const providerEmail = $("#addProviderEmail").val();
 
-$("#deleteProviderBtn").on("click", function() {
+//     const providerSSN = $("#addProviderSSN").val();
 
-    const loc = document.location;
+//     const providerDOB = $("#addProviderDOB").val();
 
-    const success = `<p class="has-text-centered has-text-white">Successfully Deleted Provider<p>`;
+//     const providerAddr1 = $("#addProviderAddr1").val();
 
-    const error = `<p class="has-text-centered has-text-white">Error Deleting Provider<p>`;
+//     const providerAddr2 = $("#addProviderAddr2").val();
 
-    $("#deleteProviderResponse").empty();
+//     const providerCity = $("#addProviderCity").val();
 
-    let providerID = $("#deleteProviderID").val();
+//     const providerState = $("#addProviderState").val();
 
- 
+//     const providerZip = $("#addProviderZip").val();
 
-    if (Number.isNaN(parseInt(providerID))) $("#deleteProviderResponse").append(error);
+//     const providerTel = $("#addProviderTel").val();
 
-    else {
-
-        memberID = parseInt(providerID);
-
-        const data = {
-
-            providerID: providerID
-
-        };
+//     const providerEffDate = $("#addProviderEffDate").val();
 
  
 
-        fetch(`${loc.origin}/api/deleteProvider`, {
+//     const data = {
 
-                method: 'DELETE',
+//         providerID: providerID,
 
-                headers: {
+//         providerBname: providerBname,
 
-                    'Content-Type': 'application/json',
+//         providerTitle: providerTitle,
 
-                },
+//         providerFname: providerFname,
 
-                body: JSON.stringify(data),
+//         providerMinitial: providerMinitial,
 
-            })
+//         providerLname: providerLname,
 
-            .then((response) => {
+//         providerSuffix: providerSuffix,
+
+//         providerEmail: providerEmail,
+
+//         providerSSN: providerSSN,
+
+//         providerDOB: providerDOB,
+
+//         providerAddr1: providerAddr1,
+
+//         providerAddr2: providerAddr2,
+
+//         providerCity: providerCity,
+
+//         providerState: providerState,
+
+//         providerZip: providerZip,
+
+//         providerTel: providerTel,
+
+//         providerEffDate: providerEffDate
+
+ 
+
+//     };
+
+//     // console.log(data);
+
+//     fetch(`${loc.origin}/api/addProvider`, {
+
+//             method: 'POST',
+
+//             headers: {
+
+//                 'Content-Type': 'application/json',
+
+//             },
+
+//             body: JSON.stringify(data),
+
+//         })
+
+//         .then((response) => {
+
+//             if (response.status === 200) $("#addProviderResponse").append(success);
+
+//             else $("#addProviderResponse").append(error);
+
+//         });
+
+ 
+
+// });
 
  
 
  
 
-                if (response.status === 200) $("#deleteProviderResponse").append(success);
+// $("#searchMemberBtn").on("click", function() {
 
-                else $("#deleteProviderResponse").append(error);
-
-            });
+//     const loc = document.location;
 
  
 
-    }
+//     let memberID = $("#searchMemberID").val();
 
-})
+//     let memberFN = $("#searchMemberFN").val();
+
+//     let memberLN = $("#searchMemberLN").val();
+
+//     let memberDOB = $("#searchMemberDOB").val();
+
+ 
+
+//     if (Number.isNaN(parseInt(memberID))) memberID = -1;
+
+//     else memberID = parseInt(memberID);
+
+ 
+
+//     const data = {
+
+//         memberID: memberID,
+
+//         memberFN: memberFN,
+
+//         memberLN: memberLN,
+
+//         memberDOB: memberDOB
+
+//     };
+
+ 
+
+//     fetch(`${loc.origin}/api/allMemberSearch`, {
+
+//             method: 'POST',
+
+//             headers: {
+
+//                 'Content-Type': 'application/json',
+
+//             },
+
+//             body: JSON.stringify(data),
+
+//         })
+
+//         .then((response) => response.json())
+
+//         .then((data) => {
+
+ 
+
+//             $("#memberTableBody").empty();
+
+//             for (const element of data.list) {
+
+//                 let rowHTML = `<tr>
+
+//                 <td>${element.member_id}</td>
+
+//                 <td>${element.user_name}</td>
+
+//                 <td>${element.first_name}</td>
+
+//                 <td>${element.last_name}</td>
+
+//                 <td>${element.dob}</td>
+
+//                 <td>${element.address_line1}</td>
+
+//                 <td>${element.city}</td>
+
+//                 <td>${element.state_code}</td>
+
+//                 <td>${element.zip_code}</td>
+
+//                 </tr>`;
+
+//                 $("#memberTableBody").append(rowHTML);
+
+//             }
+
+//         });
+
+// });
+
+ 
+
+// $("#searchProviderBtn").on("click", function() {
+
+//     const loc = document.location;
+
+ 
+
+//     let providerID = $("#searchProviderID").val();
+
+//     let providerBN = $("#searchProviderBN").val();
+
+//     let providerFN = $("#searchProviderFN").val();
+
+//     let providerLN = $("#searchProviderLN").val();
+
+ 
+
+//     if (Number.isNaN(parseInt(providerID))) providerID = -1;
+
+//     else providerID = parseInt(providerID);
+
+ 
+
+//     const data = {
+
+//         providerID: providerID,
+
+//         providerBN: providerBN,
+
+//         providerFN: providerFN,
+
+//         providerLN: providerLN
+
+//     };
+
+ 
+
+//     fetch(`${loc.origin}/api/allProviderSearch`, {
+
+//             method: 'POST',
+
+//             headers: {
+
+//                 'Content-Type': 'application/json',
+
+//             },
+
+//             body: JSON.stringify(data),
+
+//         })
+
+//         .then((response) => response.json())
+
+//         .then((data) => {
+
+ 
+
+//             $("#providerTableBody").empty();
+
+//             for (const element of data.list) {
+
+//                 let rowHTML = `<tr>
+
+//                 <td>${element.provider_id}</td>
+
+//                 <td>${element.business_name}</td>
+
+//                 <td>${element.first_name}</td>
+
+//                 <td>${element.last_name}</td>
+
+//                 <td>${element.birth_date}</td>
+
+//                 <td>${element.address_line1}</td>
+
+//                 <td>${element.city}</td>
+
+//                 <td>${element.state_code}</td>
+
+//                 <td>${element.zip_code}</td>
+
+//                 </tr>`;
+
+//                 $("#providerTableBody").append(rowHTML);
+
+//             }
+
+//         });
+
+// });
+
+ 
+
+// $("#deleteMemberBtn").on("click", function() {
+
+//     const loc = document.location;
+
+//     const success = `<p class="has-text-centered has-text-white">Successfully Deleted Member<p>`;
+
+//     const error = `<p class="has-text-centered has-text-white">Error Deleting Member<p>`;
+
+//     $("#deleteMemberResponse").empty();
+
+//     let memberID = $("#deleteMemberID").val();
+
+ 
+
+//     if (Number.isNaN(parseInt(memberID))) $("#deleteMemberResponse").append(error);
+
+//     else {
+
+//         memberID = parseInt(memberID);
+
+//         const data = {
+
+//             memberID: memberID
+
+//         };
+
+ 
+
+//         fetch(`${loc.origin}/api/deleteMember`, {
+
+//                 method: 'DELETE',
+
+//                 headers: {
+
+//                     'Content-Type': 'application/json',
+
+//                 },
+
+//                 body: JSON.stringify(data),
+
+//             })
+
+//             .then((response) => {
+
+ 
+
+ 
+
+//                 if (response.status === 200) $("#deleteMemberResponse").append(success);
+
+//                 else $("#deleteMemberResponse").append(error);
+
+//             });
+
+ 
+
+//     }
+
+// });
+
+ 
+
+// $("#deleteProviderBtn").on("click", function() {
+
+//     const loc = document.location;
+
+//     const success = `<p class="has-text-centered has-text-white">Successfully Deleted Provider<p>`;
+
+//     const error = `<p class="has-text-centered has-text-white">Error Deleting Provider<p>`;
+
+//     $("#deleteProviderResponse").empty();
+
+//     let providerID = $("#deleteProviderID").val();
+
+ 
+
+//     if (Number.isNaN(parseInt(providerID))) $("#deleteProviderResponse").append(error);
+
+//     else {
+
+//         memberID = parseInt(providerID);
+
+//         const data = {
+
+//             providerID: providerID
+
+//         };
+
+ 
+
+//         fetch(`${loc.origin}/api/deleteProvider`, {
+
+//                 method: 'DELETE',
+
+//                 headers: {
+
+//                     'Content-Type': 'application/json',
+
+//                 },
+
+//                 body: JSON.stringify(data),
+
+//             })
+
+//             .then((response) => {
+
+ 
+
+ 
+
+//                 if (response.status === 200) $("#deleteProviderResponse").append(success);
+
+//                 else $("#deleteProviderResponse").append(error);
+
+//             });
+
+ 
+
+//     }
+
+// })

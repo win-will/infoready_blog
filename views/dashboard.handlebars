@@ -1,18 +1,26 @@
-<div class="box" style="height:500px; max-width:960px;margin:auto; align-items:center;">
-    
-    <table class="table" style="display:block;overflow:auto;height:450px;">
-      <thead>
-        <tr>
-          <th>Post</th>
-          <th>Username</th>
-          <th>Time</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody id="postsTableBody"> 
+<div class="box" style="height:500px; max-width:960px;margin:auto;align-items:center;overflow:auto;">
+    {{#each posts as |post|}}
+    <div class="card" style="margin-bottom: 2px;">
+        <header class="card-header">
+            
+              <div class="column has-text-left">post.title</div>
+              <div class="column has-text-right">post.user.username</div>
           
-      </tbody>
-  </table>
-
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+        </header>
+        <div class="card-content" style="margin-bottom: 2px;">
+            <div class="content">
+              post.content
+              <br>
+              <time datetime="2016-1-1">post.updatedAt</time>
+            </div>
+        </div>
+        <footer class="card-footer"></footer>
+      </div>
+    {{/each}}
 </div>
 

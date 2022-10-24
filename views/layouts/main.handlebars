@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Secure Coding Console</title>
+      <title>InfoReady Blog</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" />
@@ -22,29 +22,35 @@
       <div class="tabs is-centered is-boxed">
         <ul>
           <li>
-            <a class="has-text-grey-light has-text-weight-bold" id="homeLabel">
-              <span class="icon is-small"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></span>
+            <a href="./home"class="has-text-grey-light has-text-weight-bold" id="homeLabel">
+              <span class="icon is-small"><i class="fas fa-house" aria-hidden="true"></i></span>
               <span>Home</span>
-            </a>
-          </li>
-          <li>
-            <a class="has-text-grey-light has-text-weight-bold" id="dashboardLabel">
-              <span class="icon is-small"><i class="fas fa-magnifying-glass-arrow-right"></i></span>
-              <span>Dashboard</span>
             </a>
           </li>
           {{#unless logged_in}}
           <li>
             <a href="./login" class="has-text-grey-light has-text-weight-bold" id="loginLabel">
-              <span class="icon is-small"><i class="far fa-power-off" aria-hidden="true"></i></span>
+              <span class="icon is-small"><i class="fas fa-right-from-bracket" aria-hidden="true"></i></span>
               <span>Log In</span>
+            </a>
+          </li>
+          <li>
+            <a href="./signup" class="has-text-grey-light has-text-weight-bold" id="signupLabel">
+              <span class="icon is-small"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></span>
+              <span>Sign Up</span>
             </a>
           </li>
           {{/unless}}
           {{#if logged_in}}
           <li>
-            <a class="has-text-grey-light has-text-weight-bold" id="searchProvider" id="yourPostsLabel">
-              <span class="icon is-small"><i class="fas fa-magnifying-glass-arrow-right"></i></span>
+            <a href="./dashboard" class="has-text-grey-light has-text-weight-bold" id="dashboardLabel">
+              <span class="icon is-small"><i class="fas fa-columns"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="./yourposts" class="has-text-grey-light has-text-weight-bold" id="searchProvider" id="yourPostsLabel">
+              <span class="icon is-small"><i class="fas fa-border-all"></i></span>
               <span>Your Posts</span>
             </a>
           </li>          

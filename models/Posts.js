@@ -29,10 +29,10 @@ Posts.init(
     updatedAt: {
         type: DataTypes.DATE
     },
-    userid: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: false
-    },
+    // userid: {
+    //     type: DataTypes.INTEGER.UNSIGNED,
+    //     allowNull: false
+    // },
   },
   {
     sequelize,
