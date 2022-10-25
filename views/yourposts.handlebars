@@ -1,0 +1,74 @@
+<div class="box" style="height:500px; max-width:960px;margin:auto;align-items:center;overflow:auto;">
+    {{#each posts as |post|}}
+    <div class="card" style="margin-bottom: 10px;">
+        <header class="card-header">
+            
+              <div class="column has-text-left has-text-weight-bold">{{post.title}}</div>
+              <div class="column has-text-right is-italic">Posted By {{post.user.username}} On {{format_date post.updatedAt}}</div>
+          
+            <button class="card-header-icon updatePostBtn" aria-label="more options" id="updatePostBtn" data-id="{{post.id}}">
+              <span class="icon">
+                <i class="fas fa-pen-to-square" aria-hidden="true"></i>
+              </span>
+            </button>
+        </header>
+      </div>
+    {{/each}}
+</div>
+<button class="button is-block is-large is-black" style="margin-left:auto;margin-right:auto;margin-top:10px;" id="createPostBtn">Create Post</button>
+
+
+<div class="modal" id="updatePostModal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" id="updatePostModalTitle"></input>
+        </div>
+      </div>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea" id="updatePostModalContent"></textarea>
+        </div>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" id="updatePostSaveBtn">Update</button>
+      <button class="button is-danger" id="updatePostDeleteBtn">Delete</button>
+      <button class="button" id="updatePostCancelBtn">Cancel</button>
+    </footer>
+  </div>
+</div>
+
+<div class="modal" id="createPostModal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" id="createPostTitle">
+        </div>
+      </div>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea" id="createPostContent"></textarea>
+        </div>
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" id="createPostSaveBtn">Create</button>
+      <button class="button" id="createPostCancelBtn">Cancel</button>
+    </footer>
+  </div>
+</div>
+<script src="/js/yourposts-highlight.js"></script>
+<script src="/js/yourposts.js"></script>

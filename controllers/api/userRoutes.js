@@ -51,10 +51,11 @@ router.post('/signup', async (req, res) => {
 });
   
 
-router.post('/getUserId', (req, res) => {
+router.get('/getId', (req, res) => {
   
-  if (req.session.logged_in) res.json({ userid: req.session.user_id});
-  else res.status(401).json("Authorization Required");
+  // if (req.session.logged_in) 
+  res.status(200).json({ userid: req.session.logged_in});
+  // else res.status(401).json("Authorization Required");
   
 });
 

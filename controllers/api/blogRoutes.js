@@ -31,19 +31,19 @@ router.get('/', async (req, res) => {
   
 });
 
-// get all posts from a user
-router.post('/:id', async (req, res) => {
-  // find all posts for a user
-    try {
-      const postData = await Posts.findAll({
-        where: { userId: req.params.id},
-        include: [{ model: User, attributes: { exclude: ['password','id'] } }], 
-      });
-        res.status(200).json(postData);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-});
+// get a post
+// router.post('/:id', async (req, res) => {
+//   // find all posts for a user
+//     try {
+//       const postData = await Posts.findAll({
+//         where: { userId: req.params.id},
+//         include: [{ model: User, attributes: { exclude: ['password','id'] } }], 
+//       });
+//         res.status(200).json(postData);
+//     } catch (err) {
+//       res.status(500).json(err);
+//     }
+// });
 
 // get one post
 router.get('/:id', async (req, res) => {
@@ -65,7 +65,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// create new product
+// create new post
 router.post('/', (req, res) => {
   /* req.body should look like this...
       {

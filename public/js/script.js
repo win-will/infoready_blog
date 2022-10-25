@@ -1,20 +1,52 @@
 // $(document).ready(function() {
 
-//     $("#searchMember").css({ "border-style": "solid", "border-color": "white" });
-
-//     $("#searchProvider").css({ "border-style": "none" });
-
-//     $("#addMember").css({ "border-style": "none" });
-
-//     $("#addProvider").css({ "border-style": "none" });
-
-//     $("#deleteProvider").css({ "border-style": "none" });
-
-//     $("#deleteMember").css({ "border-style": "none" });
+//     $("#homeLabel").css({ "border-style": "solid", "border-color": "white" });
+//     $("#dashboardLabel").css({ "border-style": "none" });
+//     $("#loginLabel").css({ "border-style": "none" });
+//     $("#signupLabel").css({ "border-style": "none" });
+//     $("#yourpostsLabel").css({ "border-style": "none" });
 
 // });
 
- 
+$("#homeLabel").on("click", function() {
+    $("#homeLabel").css({ "border-style": "solid", "border-color": "white" });
+    $("#dashboardLabel").css({ "border-style": "none" });
+    $("#loginLabel").css({ "border-style": "none" });
+    $("#signupLabel").css({ "border-style": "none" });
+    $("#yourpostsLabel").css({ "border-style": "none" });
+});
+
+$("#loginLabel").on("click", function() {
+    $("#homeLabel").css({ "border-style": "none" });
+    $("#dashboardLabel").css({ "border-style": "none" });
+    $("#loginLabel").css({ "border-style": "solid", "border-color": "white" });
+    $("#signupLabel").css({ "border-style": "none" });
+    $("#yourpostsLabel").css({ "border-style": "none" });
+});
+
+$("#signupLabel").on("click", function() {
+    $("#homeLabel").css({ "border-style": "none" });
+    $("#dashboardLabel").css({ "border-style": "none" });
+    $("#loginLabel").css({ "border-style": "none" });
+    $("#signupLabel").css({ "border-style": "solid", "border-color": "white" });
+    $("#yourpostsLabel").css({ "border-style": "none" });
+});
+
+$("#dashboardLabel").on("click", function() {
+    $("#homeLabel").css({ "border-style": "none" });
+    $("#dashboardLabel").css({ "border-style": "solid", "border-color": "white" });
+    $("#loginLabel").css({ "border-style": "none" });
+    $("#signupLabel").css({ "border-style": "none" });
+    $("#yourpostsLabel").css({ "border-style": "none" });
+});
+
+$("#yourpostsLabel").on("click", function() {
+    $("#homeLabel").css({ "border-style": "none" });
+    $("#dashboardLabel").css({ "border-style": "none" });
+    $("#loginLabel").css({ "border-style": "none" });
+    $("#signupLabel").css({ "border-style": "none" });
+    $("#yourpostsLabel").css({ "border-style": "solid", "border-color": "white" });
+});
 
 // // View event handlers
 
