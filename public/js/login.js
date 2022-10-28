@@ -5,6 +5,7 @@ const loginFormHandler = async (event) => {
   // Gather the data from the form elements on the page
   const username = document.querySelector('#username-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
+  $('#loginMsg').empty();
 
   if (username && password) {
     // Send the username and password to the server
@@ -17,8 +18,11 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to log in');
+      console.log(response.statusText);
+      $('#loginMsg').append("Failed to log in.");
     }
+  } else {
+    $('#loginMsg').append("Failed to log in.");
   }
 };
 

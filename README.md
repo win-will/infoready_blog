@@ -52,4 +52,12 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 The following animation demonstrates the application functionality:
 
-![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./assets/images/14-mvc-homework-demo-01.gif) 
+![InfoReadyBlog Login page](./assets/images/image-login.PNG) 
+
+![InfoReadyBlog Home page](./assets/images/image-home.PNG) 
+
+![Post with comment in InfoReadyBlog](./assets/images/image-post-with-comment.PNG) 
+
+![Leaving acomment in InfoReadyBlog](./assets/images/image-leave-comment.PNG) 
+
+![Creating a post in InfoReadyBlog](./assets/images/image-create-post.PNG) 

@@ -5,6 +5,7 @@ const signupFormHandler = async (event) => {
   // Gather the data from the form elements on the page
   const username = document.querySelector('#username-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
+  $('#signupMsg').empty();
 
   if (username && password) {
     // Send the username and password to the server
@@ -15,10 +16,25 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/login');
+      const loginResponse = await fetch('/api/users/login', {
+        method: 'POST',
+        body: JSON.stringify({ username, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (loginResponse.ok) {
+        document.location.replace('/');
+      } else {
+        console.log(loginResponse.statusText);
+        $('#signupMsg').append("Failed to log in.");
+      }
+      
     } else {
-      alert('Failed to log in');
+      console.log(response.statusText);
+      $('#signupMsg').append("Failed to sign up user.");
     }
+  } else {
+    $('#signupMsg').append("Failed to sign up user.");
   }
 };
 

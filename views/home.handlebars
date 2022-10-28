@@ -1,15 +1,68 @@
 <div class="box" style="height:500px; max-width:960px;margin:auto;align-items:center;overflow:auto;">
-  <div class="block">
-    Welcome InfoReady Blog!
-  </div>
-  <div class="block">
-    Our team is very glad you stopped by.  We appreciate you for spending time here, and sharing your software development knowledge with your peers.  The purpose of this site is to help developers grow and learn from each other.
-  </div>
-  <div class="block">
-    Additionally, we appreciate any feedback that you are willing to share to improve this application.  A link to our Github account is in the navbar near the top of the page.  Please go there and share your thoughts in the comments section.
-  </div>
-  <div class="block">
-    Happy Blogging!
+    <!-- <span class="title has-text-weight-bold" style="margin-botton:20px !important;">Dashboard</span> -->
+    {{#each posts as |post|}}
+    <div class="card" style="margin-bottom: 5px;">
+        <header class="card-header">
+              <div class="column has-text-left has-text-weight-bold">{{post.title}}</div>
+              <div class="column has-text-right is-italic">Posted By {{post.user.username}} On {{format_date post.updatedAt}}</div>
+              <button class="card-header-icon viewPostBtn" aria-label="more options" id="viewPostBtn" data-id="{{post.id}}">
+              <span class="icon">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+              </span>
+            </button>
+    
+        </header>
+        <div class="card-content" style="margin-bottom: 2px;">
+            <div class="content">
+              {{post.content}}
+              
+            </div>
+        </div>
+        <footer class="card-footer"></footer>
+      </div>
+    {{/each}}
+
+<div class="modal" id="leaveCommentModal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="tile">
+        <div class="column has-text-left has-text-weight-bold" id="leaveCommentModalTitle"></div>
+        <div class="column has-text-right is-italic" id="leaveCommentModalBy"></div>
+      </div>
+    </header>
+    <section class="modal-card-body">
+      <span>Post</span>
+      <div class="box" id="leaveCommentPostMsg" style="height:150px;overflow:auto;"></div>
+    </section>
+    <section class="modal-card-body">
+      <span>Previous Comments</span>
+      <div class="box"  id="leaveCommentList" style="height:150px;overflow:auto;"></div>
+    </section>
+     <section class="modal-card-body">
+      {{#if logged_in}}
+      <div class="field">
+        <span>Leave Comment</span>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea" id="leaveCommentInput" rows="2"></textarea>
+        </div>
+      </div>
+      {{/if}}
+      {{#unless logged_in}}
+      <div class="has-text-centered has-text-black is-italic">Log in or sign up to add comments.</div>
+      {{/unless}}
+    </section>
+    <footer class="modal-card-foot">
+  {{#if logged_in}}
+      <button class="button is-success" id="leaveCommentAddBtn">Add Comment</button>
+  {{/if}}
+      <button class="button" id="leaveCommentCloseBtn">Close</button>
+    </footer>
   </div>
 </div>
+</div>
+<div class="has-text-danger has-text-centered" id="homeMsg"></div>
 <script src="/js/home-highlight.js"></script>
+<script src="/js/home.js"></script>
+
+<!-- <script src="/js/dashboard-highlight.js"></script> -->

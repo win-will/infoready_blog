@@ -3,11 +3,11 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
-// Initialize Posts model (table) by extending off Sequelize's Model class
-class Posts extends Model {}
+// Initialize Comments model (table) by extending off Sequelize's Model class
+class Comments extends Model {}
 
 // set up fields and rules for Product model
-Posts.init(
+Comments.init(
   {
     // define columns
     id: {
@@ -16,17 +16,10 @@ Posts.init(
         autoIncrement: true,
         allowNull: false
     },
-    title: {
-        type: DataTypes.STRING(75),
-        allowNull: false
-    },
-    content: {
+    comment: {
         type: DataTypes.TEXT
     },
     createdAt: {
-        type: DataTypes.DATE
-    },
-    updatedAt: {
         type: DataTypes.DATE
     },
   },
@@ -35,10 +28,9 @@ Posts.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'posts',
+    modelName: 'comments',
   }
 );
 
-module.exports = Posts;
-
+module.exports = Comments;
 

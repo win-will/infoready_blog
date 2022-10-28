@@ -1,0 +1,32 @@
+[
+  {
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium aenean. Aenean sed adipiscing diam donec adipiscing tristique risus nec. Suscipit tellus mauris a diam maecenas sed. Eget duis at tellus at urna condimentum mattis.",
+    "createdAt": "2022-07-31",
+    "postId": 1,
+    "userId": 1
+  },
+  {
+    "comment": "Aenean sed adipiscing diam donec adipiscing tristique risus nec. Suscipit tellus mauris a diam maecenas sed. Eget duis at tellus at urna condimentum mattis.",
+    "createdAt": "2022-03-15",
+    "postId": 2,
+    "userId": 2
+  },
+  {
+    "comment": "Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Felis eget velit aliquet sagittis id consectetur.",
+    "createdAt": "2022-10-01",
+    "postId": 3,
+    "userId": 3
+  },
+  {
+    "comment": "Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Sed elementum tempus egestas sed sed risus pretium. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Quisque non tellus orci ac. ",
+    "createdAt": "2022-06-07",
+    "postId": 4,
+    "userId": 4
+  },
+  {
+    "comment": "Pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies. Sit amet nisl suscipit adipiscing bibendum est ultricies. Quis risus sed vulputate odio ut enim blandit volutpat maecenas.",
+    "createdAt": "2022-02-17",
+    "postId": 5,
+    "userId": 5
+  }
+]

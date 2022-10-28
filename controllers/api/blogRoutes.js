@@ -1,49 +1,26 @@
 const router = require('express').Router();
-const { Posts, User } = require('../../models');
-const { restore } = require('../../models/User');
-// const withAuth = require('../../utils/auth');
+const { Posts, User, Comments } = require('../../models');
 
 // The `/api/blog` endpoint
 
 // get all posts
 router.get('/', async (req, res) => {
   // find all products
-//   console.log(req.session);
   console.log(req.sessionID);
-//   req.session.id
-//   if (req.session.logged_in) {
-    try {
-        const postData = await Posts.findAll({
-            include: [{ model: User, attributes: { exclude: ['password','id'] } }], 
-          });
-        
-        const posts = postData.map((post) => post.get({ plain: true }));
-        res.render("dashboard", {posts});
-        res.status(200).json(postData);
-      } catch (err) {
-        res.status(500).json(err);
-      }
 
-//   } else {
-//     res.status(401).json("Authorization Required");
-    
-//   }
+  try {
+      const postData = await Posts.findAll({
+          include: [{ model: User, attributes: { exclude: ['password','id'] } },  { model: Comments, attributes: { exclude: ['postId','userId'] }}], 
+        });
+      
+      const posts = postData.map((post) => post.get({ plain: true }));
+      res.render("dashboard", {posts});
+      res.status(200).json(postData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
   
 });
-
-// get a post
-// router.post('/:id', async (req, res) => {
-//   // find all posts for a user
-//     try {
-//       const postData = await Posts.findAll({
-//         where: { userId: req.params.id},
-//         include: [{ model: User, attributes: { exclude: ['password','id'] } }], 
-//       });
-//         res.status(200).json(postData);
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-// });
 
 // get one post
 router.get('/:id', async (req, res) => {
@@ -51,7 +28,7 @@ router.get('/:id', async (req, res) => {
 
   try {
     const postData = await Posts.findByPk(req.params.id, {
-        include: [{ model: User, attributes: { exclude: ['password','id'] } }], 
+        include: [{ model: User, attributes: { exclude: ['password','id'] } }, { model: Comments, include: [{model: User, attributes: { exclude: ['password','id'] }}], attributes: { exclude: ['postId'] }}], 
     });
 
     if (!postData) {
